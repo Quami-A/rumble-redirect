@@ -5,6 +5,7 @@ export default {
     
     const redirects = {
       '/rumble': 'https://rumble.com/c/c-7834008',
+      '/youtube': 'https://www.youtube.com/@theworldcupcentral',
     };
     
     if (redirects[pathname]) {
