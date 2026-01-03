@@ -1,3 +1,4 @@
-name = "rumble-redirect"
+
+name = "social-links"
 main = "index.js"
 compatibility_date = "2026-01-03"
