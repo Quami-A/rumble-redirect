@@ -13,7 +13,7 @@ export default {
       return Response.redirect(redirects[pathname], 301);
     }
     
-    // Custom 404 Page
+    // Custom 404 Page with Your Logo
     return new Response(`
 <!DOCTYPE html>
 <html lang="en">
@@ -42,37 +42,40 @@ export default {
     .container {
       max-width: 600px;
       text-align: center;
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(0, 20, 40, 0.85);
       backdrop-filter: blur(10px);
       border-radius: 20px;
       padding: 50px 30px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     }
     
     .logo {
-      width: 120px;
-      height: 120px;
+      width: 150px;
+      height: 150px;
       margin: 0 auto 30px;
-      animation: bounce 2s infinite;
+      border-radius: 20px;
+      animation: bounce 2s infinite ease-in-out;
     }
     
     @keyframes bounce {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+      50% { transform: translateY(-15px); }
     }
     
     h1 {
-      font-size: 72px;
+      font-size: 96px;
       font-weight: 700;
       margin-bottom: 20px;
       color: #FFD700;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+      line-height: 1;
     }
     
     h2 {
-      font-size: 28px;
+      font-size: 32px;
       font-weight: 600;
       margin-bottom: 15px;
+      color: #fff;
     }
     
     p {
@@ -80,6 +83,7 @@ export default {
       margin-bottom: 35px;
       opacity: 0.95;
       line-height: 1.6;
+      color: #fff;
     }
     
     .links {
@@ -92,7 +96,7 @@ export default {
     
     .btn {
       display: inline-block;
-      padding: 15px 30px;
+      padding: 16px 32px;
       background: #fff;
       color: #0066CC;
       text-decoration: none;
@@ -105,18 +109,28 @@ export default {
     
     .btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-      background: #FFD700;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     }
     
     .btn-primary {
       background: #FFD700;
       color: #0066CC;
+      font-size: 18px;
+      padding: 18px 40px;
+    }
+    
+    .btn-primary:hover {
+      background: #FFC700;
     }
     
     .btn-secondary {
       background: #fff;
       color: #0066CC;
+    }
+    
+    .btn-secondary:hover {
+      background: #00CC66;
+      color: #fff;
     }
     
     .available-links {
@@ -129,25 +143,23 @@ export default {
       font-size: 20px;
       margin-bottom: 20px;
       opacity: 0.9;
+      color: #00CC66;
     }
     
     @media (max-width: 600px) {
-      h1 { font-size: 56px; }
-      h2 { font-size: 24px; }
+      h1 { font-size: 72px; }
+      h2 { font-size: 26px; }
       p { font-size: 16px; }
-      .btn { padding: 12px 24px; font-size: 14px; }
+      .btn { padding: 14px 28px; font-size: 15px; }
+      .btn-primary { padding: 16px 32px; font-size: 16px; }
       .container { padding: 40px 20px; }
+      .logo { width: 120px; height: 120px; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="100" cy="100" r="90" fill="#0066CC" stroke="#fff" stroke-width="4"/>
-      <path d="M100 20 L130 40 L130 80 L100 100 L70 80 L70 40 Z" fill="#00CC66" stroke="#fff" stroke-width="3"/>
-      <path d="M40 100 L60 70 L100 70 L120 100 L100 130 L60 130 Z" fill="#00CC66" stroke="#fff" stroke-width="3"/>
-      <text x="100" y="115" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-weight="700" font-size="32">WCC</text>
-    </svg>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15825967/695acb033797b_LogoforWorldCupCentral.png" alt="World Cup Central Logo" class="logo">
     
     <h1>404</h1>
     <h2>Offside! ⚽</h2>
